@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#071b24">
+  <meta name="description" content="A live countdown to New Year in Yaoundé, Cameroon.">
+  <title>Midnight in Yaoundé — New Year Countdown</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="sun-glow" aria-hidden="true"></div>
+  <div class="page">
+    <header class="header">
+      <a class="brand" href="/" aria-label="Midnight in Yaoundé home"><span class="brand-mark">✦</span><span>midnight / 237</span></a>
+      <div class="place"><span class="live-dot" aria-hidden="true"></span><span id="place-label">Yaoundé, Cameroon</span></div>
+    </header>
+
+    <main class="main">
+      <section class="hero-copy" aria-labelledby="title">
+        <p class="kicker">A new year, seen from here</p>
+        <h1 id="title">The next<br><span>beautiful beginning.</span></h1>
+        <p class="dek">A quiet clock for the last stretch of the year.<br>Counting down to midnight in Yaoundé.</p>
+        <div class="location-chip"><span class="pin" aria-hidden="true">+</span><span>Central Africa Time</span><span class="chip-line" aria-hidden="true"></span><span>UTC+01:00</span></div>
+      </section>
+
+      <section class="clock-zone" aria-label="Countdown to New Year">
+        <div class="sun-disc" aria-hidden="true"><span></span></div>
+        <div class="clock-card">
+          <div class="card-head"><span>Until 01.01.</span><span id="target-year">2027</span></div>
+          <div class="digits" id="countdown" role="timer" aria-live="polite" aria-atomic="true">
+            <div class="digit-block"><strong id="days">000</strong><small>days</small></div>
+            <div class="colon" aria-hidden="true">:</div>
+            <div class="digit-block"><strong id="hours">00</strong><small>hours</small></div>
+            <div class="colon" aria-hidden="true">:</div>
+            <div class="digit-block"><strong id="minutes">00</strong><small>minutes</small></div>
+            <div class="colon" aria-hidden="true">:</div>
+            <div class="digit-block"><strong id="seconds">00</strong><small>seconds</small></div>
+          </div>
+          <div class="card-foot"><span id="target-date">Friday, January 1, 2027</span><span id="current-time">00:00:00</span></div>
+        </div>
+        <div class="year-progress"><div class="progress-meta"><span>2026 / 2027</span><span id="progress-percent">—</span></div><div class="progress-track"><span id="progress-bar"></span></div></div>
+      </section>
+    </main>
+
+    <footer class="footer"><span>Every second has a little light in it.</span><button id="copy-button" type="button"><span aria-hidden="true">↗</span><span id="copy-label">Copy this countdown</span></button></footer>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="/script.js" defer></script>
+</body>
+</html>
